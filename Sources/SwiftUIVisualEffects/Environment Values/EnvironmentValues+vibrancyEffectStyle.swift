@@ -4,6 +4,7 @@
 
 import SwiftUI
 
+#if os(iOS)
 extension EnvironmentValues {
 	var vibrancyEffectStyle: UIVibrancyEffectStyle? {
 		get {
@@ -14,3 +15,4 @@ extension EnvironmentValues {
 		}
 	}
 }
+#endif

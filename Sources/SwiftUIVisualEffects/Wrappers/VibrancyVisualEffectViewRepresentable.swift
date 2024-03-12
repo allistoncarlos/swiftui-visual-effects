@@ -43,11 +43,13 @@ extension _VibrancyVisualEffectViewRepresentable {
 			let blurEffect = UIBlurEffect(style: context.environment.blurEffectStyle)
 			
 			// Set `visualEffectView`'s `effect`.
+            #if os(iOS)
 			if let vibrancyEffectStyle = context.environment.vibrancyEffectStyle {
 				visualEffectView.effect = UIVibrancyEffect(blurEffect: blurEffect, style: vibrancyEffectStyle)
 			} else {
 				visualEffectView.effect = UIVibrancyEffect(blurEffect: blurEffect)
 			}
+            #endif
 		}
 	}
 }
